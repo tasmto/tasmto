@@ -1,0 +1,136 @@
+:root > h1 {
+    font-size: calc(1vw + 1vh + .5vmin);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/*HTML RESET CODE */
+html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, blockquote, pre,abbr, address, cite, code,del, dfn, em, img, ins, kbd, q, samp,small, strong, sub, sup, var,b, i,dl, dt, dd, ol, ul, li,/* fieldset,*/ form, label, legend, caption, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary,time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height:1;
+    background: #cccccc;
+    font-family: 'Open Sans', sans-serif;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,q:before, q:after {
+    content:'';
+}
+
+a {
+    margin:0;
+    padding:0;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/* The first part is to condition our <body> tag in CSS so that there are no margins and the height will always remain 100% of the screen. This will ensure that the greatest amount of screen is available for use. */
+html, body {
+    height: 100%;
+}
+
+/* Ensure that a vertical scroll bar is always displayed in the browser. Because the proportions of the website are all relative, the sudden appearance of a scroll bar (which could be triggered by an interactive component on your website) will cause your site to jump. In CSS, we can use this simple trick to ensure that the bar is always there, thus preventing jumping. */
+html {
+    overflow-y: scroll;
+}
+
+/* In order for images to fit within any screen, they need to be scaled. There are several ways to do this but a good starting point is to make all images have a width of 100%. */
+img {
+    max-width: 100%;
+    border-style: none;
+    height: auto;
+}
+
+/* Unfortunately, max-width is not supported in older versions of Internet Explorer, so a conditional comment is also included, denoted with an asterisk. */
+*img {
+    width: 100%;
+    border-style: none;
+}
+
+/* The 'clearfix' class clears a row of floated boxes. */
+.clearfix {
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    display: table;
+    content: "";
+}
+
+
+
+p{
+    margin: 0;
+}
+

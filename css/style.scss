@@ -1,0 +1,22 @@
+//PLEASE DONT ADD ANY STYLES HERE BAKA!
+
+//THE CSS STYLE RESET FILE
+@import "scss-files/html-css-reset.scss";
+
+//COLOR AND SPACING CONSTANTS LIVE HERE
+@import "scss-files/custom-properties";
+
+//TEXT RELATED STYLES (ON A BROADER SCOPE LIVE HERE
+@import "scss-files/type";
+
+//ALL THEM BUTTONS MAN
+@import "scss-files/buttons";
+
+//THE NAV BAR AND FOOTER
+@import "scss-files/nav";
+
+//ANY FANCY COMPONENT (sliders etc...)
+@import "scss-files/components";
+
+//ANY OTHER STYLES THAT DONT FIT IN WITH THOSE
+@import "scss-files/main";
