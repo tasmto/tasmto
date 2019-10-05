@@ -1,0 +1,25 @@
+.social_icons__container{
+    li{
+        display: inline;
+        a{
+            text-decoration: none;   
+            }
+            span{
+                margin: $extra__small_space/2;
+                svg{
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+
+            &:hover{
+                span{ 
+                    svg{
+                        path{
+                            fill: $white;
+                    }
+                }
+            }
+        }
+    }
+}

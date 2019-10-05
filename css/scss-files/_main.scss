@@ -4,5 +4,56 @@
 
 body{
     background: $yellow;
+
+    #wrapper {
+        overflow: hidden;
+    }      
 }
  
+
+  //#############   SMALL PHONES AND WATCHES
+  @media only screen and (min-width: 0px) {
+  #wrapper{
+      padding: $mid_space $small_space 0 ; 
+  }
+    main{
+        margin: 15vh 0 20vh
+    }
+
+    .break-on-desktop{
+        display: inline;
+    }
+
+  
+}
+
+//#############  PHONES AND TABLETS
+@media only screen and (min-width: 480px) {
+
+
+
+
+}
+
+//#############  TABLETS TO LAPTOP SCREENS
+@media only screen and (min-width: 801px) {
+    #wrapper{
+        padding: $mid_space $large_space ;
+        max-width: 1000px;
+    }
+
+
+}
+
+//###############   DESKTOP SCREENS AND TV's
+@media only screen and (min-width: 1300px) {
+
+    #wrapper{
+        padding:  $mid_space $extra__large_space;
+    }
+
+    main{
+        margin: 25vh 0 20vh
+    }
+
+}
