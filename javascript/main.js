@@ -23,6 +23,8 @@ function delayNavItemsTransition (nav) {
 
     let n = 100;
 
-    menu_items.forEach(item => {   item.style.transitionDelay = `${n}ms`;
-    n += 100;});
+    menu_items.forEach(item => {
+        item.style.transitionDelay = `${n}ms`;
+        n += 100;
+    });
 }

@@ -157,7 +157,7 @@ body {
   }
   p, li {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     color: #0D0D0D;
     line-height: 27px;
     letter-spacing: 0.002em;
@@ -190,7 +190,7 @@ body {
     font-size: 26px;
   }
   p, li {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
