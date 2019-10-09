@@ -73,11 +73,11 @@
       nav{
         position: absolute;
         z-index: 2;
-        top: 20px;
-        left: -$small_space;
-        padding-left: $small_space;
-        width: 100vw;
-        background: $yellow;
+        top: 45px;
+        //left: -$small_space;
+        //padding-left: $small_space;
+        width: 100%;
+        background: $black;
         box-shadow: 0px 3px 6px rgba(172, 108, 35, 0.3);
 
         transform: scaleY(0);
@@ -88,14 +88,25 @@
 
         ul{
           li{
-            margin: $small_space*2 0 ;
+            margin: $small_space/2 0 ;
             transform: translateX(-20%);
             opacity: 0;
+            //padding: $extra__small_space 0;
             transition:  opacity 20ms ease-in, transform 200ms ease-in;
             a{
               padding: $small_space 0;
+              padding-left: $small_space/2;
               font-weight: 800;
-              
+              color: yellow;
+              width: 100%;
+              display: block;
+            }
+
+            &:hover{
+              a{
+                background: $yellow;
+                color: $black;
+              }
             }
           }
         }
