@@ -1,9 +1,10 @@
 *::selection{
-    background: $white !important;
+    background: $yellow !important;
+    color: $black !important;
 }
 
 body{
-    background: $yellow;
+    background: $black;
 
     #wrapper {
         overflow: hidden;
