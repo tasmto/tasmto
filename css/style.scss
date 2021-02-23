@@ -1,22 +1,272 @@
-//PLEASE DONT ADD ANY STYLES HERE BAKA!
+$small-screens: 480px;
+$large-tablets: 720px;
+$laptops: 950px;
 
-//THE CSS STYLE RESET FILE
-@import "scss-files/html-css-reset";
+@mixin gridParent($rows, $columns, $row_gap, $column_gap){
+  display: grid;
+  grid-template-rows: $rows;
+  grid-template-columns: $columns;
+  grid-row-gap: $row_gap;
+  grid-column-gap: $column_gap;
+}
 
-//COLOR AND SPACING CONSTANTS LIVE HERE
-@import "scss-files/custom-properties";
+@mixin clearFloat {
+    content: "";
+    clear: both;
+    float: none;
+    display: table;
+}
 
-//TEXT RELATED STYLES (ON A BROADER SCOPE LIVE HERE
-@import "scss-files/type";
 
-//ALL THEM BUTTONS MAN
-@import "scss-files/buttons";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-//THE NAV BAR AND FOOTER
-@import "scss-files/nav";
+body {
+    font-size: 16px;
+    font-family: "Effra", Helvetica Arial sans-serif;
+}
 
-//ANY FANCY COMPONENT (sliders etc...)
-@import "scss-files/components";
+main {
+    margin: 40px 0;
+}
 
-//ANY OTHER STYLES THAT DONT FIT IN WITH THOSE
-@import "scss-files/main";
+.row,
+.container {
+    width: 95%;
+    margin: 0 auto;
+
+    @media only screen and (min-width: $laptops) {
+        & {
+            width: 90%;
+        }
+    }
+}
+
+header {
+    position: sticky;
+    z-index: 6;
+    width: 98.5vw;
+    top: 0;
+   
+    
+    padding: 20px 0 10px;
+
+    div {
+      
+
+        img {
+            height: 100px;
+        }
+
+
+        .hamburger_menu__container {
+            grid-row: 2/-1;
+            height: 40px;
+            width: 40px;
+            position: absolute;
+            right: 5%;
+            display: block;
+ 
+            padding: 0 0 0 30px;
+            box-sizing: initial;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            .hamburger_menu__icon {
+                width: 100%;
+                height: 4px;
+                background: black;
+                display: block;
+                margin-bottom: 10px;
+                &:nth-last-child() {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        #main_menu__container {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            width: 100vw;
+            height: 100vh;
+            padding-top: 30vh;
+            background: #f44f4f;
+            transform: translateY(-100%) translateX(-50%);
+            line-height: 4rem;
+            font-size: 1.4rem;
+            text-align: center;
+            @include gridParent(repeat(2, auto), 1fr, 0, 0);
+            justify-items: center;
+            align-content: start;
+            transition: opacity 600ms cubic-bezier(1, 0.24, 0.63, 1.27), transform 2ms linear;
+            opacity: 0;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &.show_menu {
+                transition: opacity 600ms cubic-bezier(1, 0.24, 0.63, 1.27), transform 2ms linear;
+                opacity: 1;
+                transform: translateY(0) translateX(-50%);
+                z-index: 10;
+            }
+
+            .main_menu {
+                width: 100vw;
+
+                li>a {
+                    text-decoration: none;
+                    padding: 10px;
+                    transition: background-color 250ms cubic-bezier(1, 0.24, 0.63, 1.27);
+                    color: #ffffff;
+                    display: block;
+                    width: 100%;
+
+                    &:hover {
+                        background: #f4f4f4;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+footer {
+    width: 100%;
+    padding: 20px 0;
+    background: #ebebeb;
+    color: #575757;
+    text-align: center;
+
+    .socials {
+        margin-top: 10px;
+
+        >:nth-child(1),
+        >:nth-child(2) {
+            margin-right: 10px;
+        }
+    }
+
+    @media only screen and (min-width: $small-screens) {
+        @include clearFloat ();
+
+        >* {
+            margin: auto
+        }
+
+        p {
+            float: left;
+            margin-top: 10px;
+        }
+
+        .socials {
+            float: right;
+            margin-top: 0px;
+        }
+    }
+
+}
+
+.box {
+    width: 100%;
+    height: 250px;
+    background: rebeccapurple;
+}
+
+
+.row {
+    margin-bottom: 30px;
+
+    &::after {
+        @include clearFloat ();
+    }
+
+    >* {
+        margin-bottom: 2%;
+    }
+
+    @media only screen and (min-width: $small-screens) {
+        & {
+            >* {
+                float: left;
+            }
+
+            // 2 columns
+            &.rol-2,
+            &.rol-4 {
+                >* {
+                    width: 49%;
+                }
+
+                >*:nth-child(odd) {
+                    margin-right: 2%;
+                }
+            }
+
+        }
+
+        @media only screen and (min-width: $large-tablets) {
+            & {
+
+                // 2 columns
+                &.rol-2 {
+                    >* {
+                        float: left;
+                        width: 49%;
+                    }
+
+                    >*:nth-child(odd) {
+                        margin-right: 2%;
+                    }
+                }
+
+                // 3 columns
+                &.rol-3 {
+                    >* {
+                        width: 32%;
+                    }
+
+                    >*:nth-child(3n-2),
+                    >*:nth-child(3n-1) {
+                        margin-right: 2%;
+                    }
+                }
+
+            }
+
+            @media only screen and (min-width: $laptops) {
+                & {
+                    margin-bottom: 15px;
+
+                    // 4 columns
+                    &.rol-4 {
+                        >* {
+                            width: 23.5%;
+                        }
+
+                        >*:nth-child(4n-3),
+                        >*:nth-child(4n-2),
+                        >*:nth-child(4n-1) {
+                            margin-right: 2%;
+                        }
+                    }
+                }
+
+            }
+
+
+        }
+    }
+
+}
