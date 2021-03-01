@@ -1,19 +1,21 @@
 
 //OPEN CLOSE THE NAV MENU
 
-navMenu = () => {
-    const menu = document.querySelector('#main_menu__container');
+function navMenu () {
+    var menu = document.querySelector('#main_menu__container');
      menu.classList.toggle('show_menu');
+     document.body.classList.toggle('no-overflow');
     };
     
     
     //ONLOAD FUNCTIONS
     (function () {
     
-     const hamburgermenu = document.querySelector('.hamburger_menu__container');
-     const menu = document.querySelector('#main_menu__container');
+     var hamburgermenu = document.querySelector('.hamburger_menu__container');
+     var menu = document.querySelector('#main_menu__container');
+     var closeIcon = menu.querySelector('.close-menu');
     
-     menu.setAttribute('onclick', 'navMenu()');
+     closeIcon.setAttribute('onclick', 'navMenu()');
      hamburgermenu.setAttribute('onclick', 'navMenu()');
     
     }());
