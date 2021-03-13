@@ -1,0 +1,217 @@
+@charset "UTF-8";
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* -------------------------------------------------------------------
+--------------   COLORS    --------------
+--------------------------------------------------------------------*/
+/* -------------------------------------------------------------------
+--------------   SPACING    --------------
+--------------------------------------------------------------------*/
+/* -------------------------------------------------------------------
+--------------   MEDIA QUERRIES    --------------
+--------------------------------------------------------------------*/
+/* -------------------------------------------------------------------
+--------------   EASE FUNCTIONS    --------------
+--------------------------------------------------------------------*/
+main {
+  background: #21EBD5;
+  height: 70vh;
+}
+
+header {
+  height: 50px;
+  position: relative;
+}
+header > * {
+  position: fixed;
+  left: 5%;
+}
+header div.hamburger-menu--container {
+  top: 37.037037037px;
+  z-index: 100;
+  cursor: pointer;
+}
+header nav {
+  top: 75px;
+  z-index: 150;
+}
+
+nav {
+  background: #FFFFFF;
+  padding: 50px;
+  display: block;
+}
+nav[aria-expanded=true] {
+  display: none;
+}
+nav ul {
+  text-align: center;
+}
+nav ul li a {
+  display: block;
+  position: relative;
+  padding: 15px;
+  color: #353C3A;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 135%;
+  letter-spacing: 5%;
+  transition: color 200ms ease;
+}
+nav ul li a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: bottom;
+  bottom: 10px;
+  height: 3px;
+  width: 100%;
+  background: transparent;
+  pointer-events: none;
+  transition: transform 350ms cubic-bezier(1, 0.01, 0.32, 1.18), background-color 200ms ease-in;
+}
+nav ul li a:hover {
+  color: #FFFFFF;
+  transition: color 200ms ease;
+  transition-delay: 300ms;
+}
+nav ul li a:hover::before {
+  background: #353C3A;
+  transform: translateX(-50%) scaleY(10);
+}
+
+body {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #353C3A;
+}
+
+h1 {
+  font-size: 1, 75‬rem;
+  letter-spacing: 0.01rem;
+  line-height: 130%;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1, 5‬rem;
+  line-height: 130%;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1, 125rem;
+  line-height: 135%;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+}
+
+p,
+a {
+  font-size: 1rem;
+  line-height: 135%;
+  letter-spacing: 0.05rem;
+  font-weight: normal;
+}
+p.small,
+a.small {
+  font-size: 0.875rem;
+}
+p.big,
+a.big {
+  font-size: 1, 125rem;
+}
+
+a {
+  text-decoration: underline;
+  color: #353C3A;
+}
+
+h1 {
+  font-size: 1, 9rem;
+}
+
+h1 {
+  font-size: 2, 18rem;
+}
+
+/*# sourceMappingURL=/style.a6dae8f7.css.map */

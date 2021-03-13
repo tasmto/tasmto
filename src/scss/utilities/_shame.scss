@@ -1,0 +1,11 @@
+// @use '../base' as *;
+@use '../abstracts' as *;
+// @use '../components' as *;
+@use '../layout' as *;
+
+
+//TEMP
+main {
+    background: $turquoise;
+    height: 70vh;
+}

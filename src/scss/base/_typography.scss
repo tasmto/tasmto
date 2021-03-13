@@ -1,3 +1,8 @@
+@use '../components' as *;
+@use '../abstracts' as *;
+@use '../layout' as *;
+@use '../utilities' as *;
+
 // BASE STYLES (MOBILE)
 body {
     font-family: 'Lato', Arial, Helvetica, sans-serif;
