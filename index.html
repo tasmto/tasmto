@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +17,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap"
         rel="stylesheet">
+        
+    <!--MODERNIZR-->
+    <script src="./javascript/modernizr-custom.js"></script>
+
 
     <!--THE FAVICON-->
     <link rel="shortcut icon" href="sources/images/favicon.ico" type="image/x-icon" />
@@ -73,10 +76,31 @@
     <meta name="msvalidate.01" content="DC23F672FABCAEF2762D596B3ACE6C37" />
 
 </head>
+
 <body>
-
-
-
-    
+    <header>
+        <div aria-controls="navigation-menu" class="hamburger-menu--container">
+            <div class="hamburger-menu"><img src="./sources/icons/open-menu.svg" 
+                data-open="./sources/icons/open-menu.svg"
+                data-close="./sources/icons/close-menu.svg" alt="" ></div>
+        </div>
+        <nav id="navigation-menu" aria-expanded="false">
+            <ul class="nav-menu--container">
+                <li><a href="">Home</a></li>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">Get in touch</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main></main>
+    <footer>
+        <p>Copyright © <a href="https://tasmto.com" rel="cannonical">tasmto</a></p>
+        <nav class="footer-social-menu--conatiner"><ul>
+            <li><a href="" title="">
+                
+            </a></li>
+        </ul></nav>
+    </footer>
 </body>
+
 </html>

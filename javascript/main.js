@@ -1,21 +1,19 @@
+var navMenuState = false;
+// ON LOAD IFFE
+(function () {
 
-//OPEN CLOSE THE NAV MENU
+    // NAV FUNCTIONALITY
+    const docHeader =document.querySelector('header');
+    const navController = docHeader.querySelector('.hamburger-menu');
+    navController.addEventListener('click', () => {
+        navMenuState = !navMenuState;
+        const nav = docHeader.querySelector('nav');
+        nav.setAttribute('aria-expanded', `${navMenuState}`);
+    });
 
-function navMenu () {
-    var menu = document.querySelector('#main_menu__container');
-     menu.classList.toggle('show_menu');
-     document.body.classList.toggle('no-overflow');
-    };
-    
-    
-    //ONLOAD FUNCTIONS
-    (function () {
-    
-     var hamburgermenu = document.querySelector('.hamburger_menu__container');
-     var menu = document.querySelector('#main_menu__container');
-     var closeIcon = menu.querySelector('.close-menu');
-    
-     closeIcon.setAttribute('onclick', 'navMenu()');
-     hamburgermenu.setAttribute('onclick', 'navMenu()');
-    
-    }());
+
+
+
+
+
+} ());

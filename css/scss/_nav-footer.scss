@@ -1,0 +1,75 @@
+// NAV
+header {
+    height: $largeSpace;
+    position: relative;
+
+    >* {
+        position: fixed;
+        left: $containerConstant;
+    }
+
+    div.hamburger-menu--container {
+        top: $largeSpace/1.35;
+        z-index: 100;
+        cursor: pointer;
+    }
+
+    nav {
+        top: $largeSpace*1.5;
+        z-index: 150;
+    }
+}
+
+nav {
+    background: $white;
+    padding: $largeSpace;
+    display: block;
+
+    &[aria-expanded="true"] {
+        display: none;
+    }
+
+    ul {
+        text-align: center;
+        li {
+            a {
+                display: block;
+                position: relative;
+                padding: $midSpace/2;
+                color: $gray;
+                text-decoration: none;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 135%;
+                letter-spacing: 5%;
+                transition: color 200ms ease;
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    z-index: -1;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    transform-origin: bottom;
+                    bottom: $extraSmallSpace;
+                    height: 3px;
+                    width: 100%;
+                    background: transparent;
+                    pointer-events: none; // MODENIZR MUST INCLUDE THIS
+                    transition: transform 350ms $slowStartEaseEnd, background-color 200ms ease-in;
+                }
+                &:hover {
+                    color: $white;
+                    transition: color 200ms ease;
+                    transition-delay: 300ms;
+                   &::before {
+                    background: $gray;
+                    transform: translateX(-50%) scaleY(10);
+                   }
+                }
+            }
+        }
+    }
+}
+
+// FOOTER
