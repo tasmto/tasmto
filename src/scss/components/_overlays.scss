@@ -1,0 +1,33 @@
+@use '../abstracts'as *;
+
+.blurOverlay {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100vh;
+        backdrop-filter: blur(10px);
+        background: $black;
+        background-size: cover;
+        opacity: 0.5;
+        animation: opacityIn ease 1450ms forwards;
+    }
+}
+
+@keyframes opacityIn {
+    from {
+        opacity: 0.25;
+    }
+
+    70% {
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

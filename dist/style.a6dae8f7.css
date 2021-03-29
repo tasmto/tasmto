@@ -21,8 +21,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role=list],
-ol[role=list] {
+ul[role=navigation],
+ol[role=navigation] {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -75,21 +75,225 @@ select {
     scroll-behavior: auto !important;
   }
 }
-/* -------------------------------------------------------------------
---------------   COLORS    --------------
---------------------------------------------------------------------*/
-/* -------------------------------------------------------------------
---------------   SPACING    --------------
---------------------------------------------------------------------*/
-/* -------------------------------------------------------------------
---------------   MEDIA QUERRIES    --------------
---------------------------------------------------------------------*/
-/* -------------------------------------------------------------------
---------------   EASE FUNCTIONS    --------------
---------------------------------------------------------------------*/
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5%;
+}
+@media (max-width: 250px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+[class^=col-] {
+  flex-basis: 100%;
+  background-color: #3FC9C9;
+  padding: 20px;
+  border: 2px solid #F98383;
+}
+
+@media (max-width: 480px) {
+  .col-m-1 {
+    flex: 0 0 33.3333333333%;
+  }
+
+  .col-m-offset-1 {
+    margin-left: 16.6666666667%;
+  }
+
+  .col-m-2 {
+    flex: 0 0 66.6666666667%;
+  }
+
+  .col-m-offset-2 {
+    margin-left: 33.3333333333%;
+  }
+
+  .col-m-3 {
+    flex: 0 0 100%;
+  }
+
+  .col-m-offset-3 {
+    margin-left: 50%;
+  }
+
+  .col-m-half {
+    flex: 0 0 50%;
+  }
+}
+@media (min-width: 481px) {
+  .col-t-1 {
+    flex: 0 0 16.6666666667%;
+  }
+
+  .col-t-offset-1 {
+    margin-left: 8.3333333333%;
+  }
+
+  .col-t-2 {
+    flex: 0 0 33.3333333333%;
+  }
+
+  .col-t-offset-2 {
+    margin-left: 16.6666666667%;
+  }
+
+  .col-t-3 {
+    flex: 0 0 50%;
+  }
+
+  .col-t-offset-3 {
+    margin-left: 25%;
+  }
+
+  .col-t-4 {
+    flex: 0 0 66.6666666667%;
+  }
+
+  .col-t-offset-4 {
+    margin-left: 33.3333333333%;
+  }
+
+  .col-t-5 {
+    flex: 0 0 83.3333333333%;
+  }
+
+  .col-t-offset-5 {
+    margin-left: 41.6666666667%;
+  }
+
+  .col-t-6 {
+    flex: 0 0 100%;
+  }
+
+  .col-t-offset-6 {
+    margin-left: 50%;
+  }
+}
+@media (min-width: 801px) {
+  .col-1 {
+    flex: 0 0 8.3333333333%;
+  }
+
+  .col-offset-1 {
+    margin-left: 8.3333333333%;
+  }
+
+  .col-2 {
+    flex: 0 0 16.6666666667%;
+  }
+
+  .col-offset-2 {
+    margin-left: 16.6666666667%;
+  }
+
+  .col-3 {
+    flex: 0 0 25%;
+  }
+
+  .col-offset-3 {
+    margin-left: 25%;
+  }
+
+  .col-4 {
+    flex: 0 0 33.3333333333%;
+  }
+
+  .col-offset-4 {
+    margin-left: 33.3333333333%;
+  }
+
+  .col-5 {
+    flex: 0 0 41.6666666667%;
+  }
+
+  .col-offset-5 {
+    margin-left: 41.6666666667%;
+  }
+
+  .col-6 {
+    flex: 0 0 50%;
+  }
+
+  .col-offset-6 {
+    margin-left: 50%;
+  }
+
+  .col-7 {
+    flex: 0 0 58.3333333333%;
+  }
+
+  .col-offset-7 {
+    margin-left: 58.3333333333%;
+  }
+
+  .col-8 {
+    flex: 0 0 66.6666666667%;
+  }
+
+  .col-offset-8 {
+    margin-left: 66.6666666667%;
+  }
+
+  .col-9 {
+    flex: 0 0 75%;
+  }
+
+  .col-offset-9 {
+    margin-left: 75%;
+  }
+
+  .col-10 {
+    flex: 0 0 83.3333333333%;
+  }
+
+  .col-offset-10 {
+    margin-left: 83.3333333333%;
+  }
+
+  .col-11 {
+    flex: 0 0 91.6666666667%;
+  }
+
+  .col-offset-11 {
+    margin-left: 91.6666666667%;
+  }
+
+  .col-12 {
+    flex: 0 0 100%;
+  }
+
+  .col-offset-12 {
+    margin-left: 100%;
+  }
+}
 main {
   background: #21EBD5;
-  height: 70vh;
+  min-height: 70vh;
+}
+
+footer {
+  padding: 20px;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
+footer > * {
+  padding: 0 5%;
+}
+footer p {
+  margin-top: 20px;
+}
+
+.footer-social-menu--conatiner ul {
+  display: grid;
+  grid-template-columns: auto;
+}
+.footer-social-menu--conatiner ul li a {
+  padding: 5px;
 }
 
 header {
@@ -104,24 +308,51 @@ header div.hamburger-menu--container {
   top: 37.037037037px;
   z-index: 100;
   cursor: pointer;
+  box-sizing: content-box;
+}
+header div.hamburger-menu--container div {
+  padding: 50px;
+  transform: translateX(-50px) translateY(-50px);
 }
 header nav {
   top: 75px;
   z-index: 150;
 }
 
-nav {
+nav#navigation-menu {
   background: #FFFFFF;
   padding: 50px;
-  display: block;
+  transform: scaleY(1);
+  transform-origin: top center;
+  opacity: 1;
+  transition: opacity 500ms ease, transform 500ms cubic-bezier(1, 0.01, 0.32, 1.18);
 }
-nav[aria-expanded=true] {
-  display: none;
+nav#navigation-menu ul {
+  clip-path: polygon(0 0, 135% 0%, 135% 135%, 0% 135%);
 }
-nav ul {
+nav#navigation-menu ul li {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 250ms ease, opacity 700ms ease;
+  transition-delay: 450ms;
+}
+nav#navigation-menu[aria-expanded=false] {
+  transform: scaleY(0);
+  opacity: 0;
+  transition-delay: 250ms;
+}
+nav#navigation-menu[aria-expanded=false] ul li {
+  transform: translateX(100%);
+  opacity: 0;
+  transition-delay: 0;
+}
+nav#navigation-menu[aria-expanded=false] ul li.flipped-animation {
+  transform: translateX(-100%);
+}
+nav#navigation-menu ul {
   text-align: center;
 }
-nav ul li a {
+nav#navigation-menu ul li a {
   display: block;
   position: relative;
   padding: 15px;
@@ -133,7 +364,7 @@ nav ul li a {
   letter-spacing: 5%;
   transition: color 200ms ease;
 }
-nav ul li a::before {
+nav#navigation-menu ul li a::before {
   content: "";
   display: block;
   position: absolute;
@@ -148,16 +379,44 @@ nav ul li a::before {
   pointer-events: none;
   transition: transform 350ms cubic-bezier(1, 0.01, 0.32, 1.18), background-color 200ms ease-in;
 }
-nav ul li a:hover {
+nav#navigation-menu ul li a:hover {
   color: #FFFFFF;
   transition: color 200ms ease;
   transition-delay: 300ms;
 }
-nav ul li a:hover::before {
+nav#navigation-menu ul li a:hover::before {
   background: #353C3A;
   transform: translateX(-50%) scaleY(10);
 }
 
+.blurOverlay {
+  position: relative;
+}
+.blurOverlay::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  background: #060606;
+  background-size: cover;
+  opacity: 0.5;
+  animation: opacityIn ease 1450ms forwards;
+}
+
+@keyframes opacityIn {
+  from {
+    opacity: 0.25;
+  }
+  70% {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 0;
+  }
+}
 body {
   font-family: "Lato", Arial, Helvetica, sans-serif;
   font-size: 16px;

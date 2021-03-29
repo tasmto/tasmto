@@ -1,4 +1,78 @@
+@use '../abstracts'as *;
+
 // 2 COL
 // 3 COL
 // 4 COL
-    // 4 COL LONG
+// 4 COL LONG
+
+// FLEX BOX SYSTEM
+// TAKEN FROM: https://www.youtube.com/watch?v=g1kF45K-q7o&t=1s
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    padding: $containerConstant;
+
+    @include for-watches-only {
+        flex-direction: column;
+    }
+}
+
+$columns: 3;
+
+[class^=col-] {
+    flex-basis: 100%;
+    // DELETE
+    background-color: $darkTurquoise;
+    padding: $smallSpace;
+    border: 2px solid $red;
+}
+
+@include for-phones-only {
+    @for $i from 1 through $columns {
+        .col-m-#{$i} {
+            flex: 0 0 (100% / ($columns /$i));
+
+        }
+
+        .col-m-offset-#{$i} {
+            margin-left: 100% / ($columns*2 /$i);
+        }
+    }
+
+    .col-m-half {
+        flex: 0 0 50%;
+    }
+}
+
+
+
+@include for-tablets {
+    $columns: 6;
+
+    @for $i from 1 through $columns {
+        .col-t-#{$i} {
+            flex: 0 0 (100% / ($columns /$i));
+
+        }
+
+        .col-t-offset-#{$i} {
+            margin-left: 100% / ($columns*2 /$i);
+        }
+    }
+}
+
+@include for-laptops {
+    $columns: 12;
+
+    @for $i from 1 through $columns {
+        .col-#{$i} {
+            flex: 0 0 (100% / ($columns /$i));
+        }
+
+        .col-offset-#{$i} {
+            margin-left: 100% / ($columns /$i);
+        }
+    }
+}

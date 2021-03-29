@@ -1,0 +1,31 @@
+@use '../abstracts'as *;
+@use '../layout'as *;
+@use '../utilities'as *;
+
+
+footer {
+    padding: $smallSpace;
+    background: $white;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+     > * {
+         padding: 0 $containerConstant;
+     }
+     p {
+         margin-top: $smallSpace;
+     }
+}
+
+
+.footer-social-menu--conatiner{
+    ul {
+        display: grid;
+        grid-template-columns: auto;
+        li {
+            a{
+                padding: $extraSmallSpace/2;
+            }
+        }
+    }
+}

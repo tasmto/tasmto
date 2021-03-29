@@ -1,7 +1,6 @@
-// @use '../base' as *;
-@use '../abstracts' as *;
-@use '../layout' as *;
-@use '../utilities' as *;
+@use '../abstracts'as *;
+@use '../layout'as *;
+@use '../utilities'as *;
 
 
 // NAV
@@ -18,6 +17,12 @@ header {
         top: $largeSpace/1.35;
         z-index: 100;
         cursor: pointer;
+        box-sizing: content-box;
+
+        div {
+            padding: $largeSpace;
+            transform: translateX(-$largeSpace) translateY(-$largeSpace);
+        }
     }
 
     nav {
@@ -26,17 +31,46 @@ header {
     }
 }
 
-nav {
+nav#navigation-menu {
     background: $white;
     padding: $largeSpace;
-    display: block;
+    transform: scaleY(1);
+    transform-origin: top center;
+    opacity: 1;
+    transition: opacity 500ms ease, transform 500ms $slowStartEaseEnd;
 
-    &[aria-expanded="true"] {
-        display: none;
+    ul {
+        clip-path: polygon(0 0, 135% 0%, 135% 135%, 0% 135%);
+
+        li {
+            transform: translateX(0);
+            opacity: 1;
+            transition: transform 250ms ease, opacity 700ms ease;
+            transition-delay: 450ms;
+        }
+    }
+
+    &[aria-expanded="false"] {
+        transform: scaleY(0);
+        opacity: 0;
+        transition-delay: 250ms;
+
+        ul {
+            li {
+                transform: translateX(100%);
+                opacity: 0;
+                transition-delay: 0;
+
+                &.flipped-animation {
+                    transform: translateX(-100%);
+                }
+            }
+        }
     }
 
     ul {
         text-align: center;
+
         li {
             a {
                 display: block;
@@ -49,6 +83,7 @@ nav {
                 line-height: 135%;
                 letter-spacing: 5%;
                 transition: color 200ms ease;
+
                 &::before {
                     content: "";
                     display: block;
@@ -64,18 +99,19 @@ nav {
                     pointer-events: none; // MODENIZR MUST INCLUDE THIS
                     transition: transform 350ms $slowStartEaseEnd, background-color 200ms ease-in;
                 }
+
                 &:hover {
                     color: $white;
                     transition: color 200ms ease;
                     transition-delay: 300ms;
-                   &::before {
-                    background: $gray;
-                    transform: translateX(-50%) scaleY(10);
-                   }
+
+                    &::before {
+                        background: $gray;
+                        transform: translateX(-50%) scaleY(10);
+                    }
                 }
             }
         }
     }
 }
 
-// FOOTER
