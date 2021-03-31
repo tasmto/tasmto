@@ -785,7 +785,7 @@ body {
 }
 
 h1 {
-  font-size: 1.75rem;
+  font-size: 2.5rem;
   letter-spacing: 0.01rem;
   line-height: 130%;
   font-weight: 700;
@@ -816,16 +816,18 @@ p,
 a {
   font-size: 1rem;
   line-height: 135%;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.03rem;
   font-weight: normal;
 }
-p.small > .small,
-a.small > .small {
+p.small, p > .small,
+a.small,
+a > .small {
   font-size: 0.875rem;
 }
-p.big > .big,
-a.big > .big {
-  font-size: 1.125rem;
+p.big, p > .big,
+a.big,
+a > .big {
+  font-size: 1.3rem;
 }
 
 a {
@@ -835,12 +837,12 @@ a {
 
 @media (min-width: 481px) {
   h1 {
-    font-size: 1.9rem;
+    font-size: 2.3rem;
   }
 }
 @media (min-width: 801px) {
   h1 {
-    font-size: 2.18rem;
+    font-size: 2.5rem;
   }
 }
 section {
