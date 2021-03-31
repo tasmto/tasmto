@@ -583,6 +583,27 @@ body {
     display: block;
   }
 }
+#home-hero .text-container > * {
+  position: relative;
+  z-index: 5;
+}
+#home-hero .text-container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  background: #F98383;
+  height: 250px;
+  width: 250px;
+  border-radius: 5000px;
+  left: 50%;
+  top: 15%;
+  transform: translateX(-50%) scale(1.3);
+}
+#home-hero figure {
+  display: block;
+  z-index: 5;
+}
 
 .cv-container img {
   animation: wiggleUpDown 7000ms ease infinite alternate;
