@@ -1,29 +1,3 @@
-// COLORS
-// SPACING
-// MEDIA QUERIES MIXINS
-// EASE FUNCTIONS
-
-
-
-// -------------------------------------------------------------------
-//--------------   COLORS    --------------
-//--------------------------------------------------------------------
-$black: #060606;
-$gray: #353C3A;
-$midGray: #525F5B;
-$lightGray: #F3F0E8;
-$white: #FFFFFF;
-$turquoise: #21EBD5;
-$darkTurquoise: #3FC9C9;
-$seaFoam: #FFD0D0;
-$darkSeaFoam: #FFB8B8;
-$red: #F98383;
-$fadedRed: #FFD2B9;
-$fadedYellow: #F5E1AC;
-
-
-
-
 //  -------------------------------------------------------------------
 // --------------   SPACING    --------------
 // --------------------------------------------------------------------
@@ -36,58 +10,8 @@ $extraLargeSpace: 100px;
 // DERIVATIVES
 $halfMidSpace: $midSpace/2;
 
-
-
-//  -------------------------------------------------------------------
-// --------------   MEDIA QUERRIES    --------------
-// --------------------------------------------------------------------
-$watches: 250px;
-$phones: 480px;
-$tablets: 481px;
-$laptops: 801px;
-
-
+// THE VARIABLE THAT CONTROLLS THE BOXYNESS OF THE SITE
 $containerConstant: 5%;
-
-// SOURCE FOR THE FOLLOWING METHODOLOGY
-//https://itnext.io/writing-media-queries-with-sass-mixins-3ea591ea3ea4
-
-@mixin for-watches {
-    @media (min-width: $watches) {
-        @content;
-    }
-}
-@mixin for-watches-only {
-    @media (max-width: $watches) {
-        @content;
-    }
-}
-
-
-@mixin for-phones-only {
-    @media (max-width: $phones) {
-        @content;
-    }
-}
-
-@mixin for-tablets {
-    @media (min-width: $tablets) {
-        @content;
-    }
-}
-
-@mixin for-laptops {
-    @media (min-width: $laptops) {
-        @content;
-    }
-}
-
-@mixin for-desktop-up {
-    @media (min-width: $desktops) {
-        @content;
-    }
-}
-
 
 
 //  -------------------------------------------------------------------

@@ -4,7 +4,7 @@
 
 
 footer {
-    padding: $smallSpace;
+    padding: $midSpace 0 $smallSpace;
     background: $white;
     display: flex;
     flex-direction: column-reverse;
@@ -13,15 +13,32 @@ footer {
          padding: 0 $containerConstant;
      }
      p {
+         color: $midGray;
          margin-top: $smallSpace;
+         text-align: center;
+     }
+
+     @include for-tablets {
+         flex-direction: row;
+         p {
+             margin-top: 0;
+             text-align: left;
+             padding-right: 0;
+             width: auto;
+         }
+         nav {
+            padding-left: 0px;
+         }
      }
 }
 
 
-.footer-social-menu--conatiner{
+.footer-social-menu--container{
     ul {
-        display: grid;
-        grid-template-columns: auto;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
         li {
             a{
                 padding: $extraSmallSpace/2;

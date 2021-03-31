@@ -1,0 +1,35 @@
+@use '../abstracts'as *;
+
+
+
+.btn.cta-primary {
+    padding: $smallSpace $midSpace;
+    background-color: $turquoise;
+    color: $gray;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transform: none;
+    display: inline-block;
+    transition: padding-top 250ms ease, padding-bottom 250ms ease ,transform ease 350ms;
+
+    &:hover {
+        transform: translateY(-$extraSmallSpace);
+        padding-top: $midSpace;
+        padding-bottom: $extraSmallSpace;
+        background: $red;
+    } &:active {
+        padding-bottom: $midSpace;
+        padding-top: $extraSmallSpace;
+    }
+
+    &.white {
+        background: $white;
+        color: $gray;
+
+        &:hover {
+            background: $lightGray;
+            color: $gray;
+        }
+    }
+}

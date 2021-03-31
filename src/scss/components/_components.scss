@@ -1,5 +1,47 @@
+@use '../abstracts'as *;
 // BUTTONS
 // FORMS
 // PORTFOLIO CARDS
 // IMAGE POPUP GALLERIES
 // INTERSTICIALS (POPUPS)
+// HERO BANNERS
+
+
+
+
+// HERO BANNERS
+
+
+.hero.main-banner {
+    margin-top: 0;
+    padding: $extraLargeSpace 0 0;
+    background-color: $turquoise;
+    @include bannerCutOffGradient(#21EBD5, #3FC9C9, 75%);
+    color: $white;
+
+    a {
+        color: $white
+    }
+
+    .cta-container {
+        margin-top: $midSpace+$largeSpace;
+    }
+
+    @include for-phones-only {
+        .cta-container {
+            margin-top: $largeSpace;
+        }
+        .text-container {
+            margin-bottom: $largeSpace;
+        }
+    }
+
+    @include for-tablets {
+        @include bannerCutOffGradient(#21EBD5, #3FC9C9, 100%); 
+        padding: $extraLargeSpace 0 $midSpace;
+        .cta-container {
+            margin-top: $largeSpace - 10px;
+        }
+    }
+}
+

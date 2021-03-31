@@ -1,7 +1,9 @@
-@use '../components' as *;
-@use '../abstracts' as *;
-@use '../layout' as *;
-@use '../utilities' as *;
+@use '../abstracts'as *;
+
+@use '../components'as *;
+
+@use '../layout'as *;
+@use '../utilities'as *;
 
 // BASE STYLES (MOBILE)
 body {
@@ -11,26 +13,31 @@ body {
 }
 
 h1 {
-    font-size: 1, 75‬rem;
+    font-size: 1.75rem;
     letter-spacing: 0.01rem;
     line-height: 130%;
     font-weight: 700;
+    margin-bottom: $smallSpace;
 }
 
 h2 {
-    font-size: 1, 5‬rem;
+    font-size: 1.5‬rem;
     line-height: 130%;
     letter-spacing: 0.05rem;
     font-weight: 700;
+    margin-bottom: $largeSpace;
 }
 
 h3 {
-    font-size: 1, 125rem;
+    font-size: 1.125rem;
     line-height: 135%;
     letter-spacing: 0.05rem;
     font-weight: 700;
+    margin-bottom: $extraSmallSpace;
 }
-
+p {
+    margin-bottom: $extraSmallSpace;
+}
 p,
 a {
     font-size: 1rem;
@@ -38,12 +45,12 @@ a {
     letter-spacing: 0.05rem;
     font-weight: normal;
 
-    &.small {
+    &.small > .small {
         font-size: 0.875rem;
     }
 
-    &.big {
-        font-size: 1, 125rem;
+    &.big > .big {
+        font-size: 1.125rem;
     }
 }
 
@@ -55,12 +62,16 @@ a {
 
 
 // TABLET
-h1 {
-    font-size: 1, 9rem;
+
+@include for-tablets {
+    h1 {
+        font-size: 1.9rem;
+    }
 }
 
-
 // DESKTOP/ LAPTOPS
-h1 {
-    font-size: 2, 18rem;
+@include for-laptops {
+    h1 {
+        font-size: 2.18rem;
+    }
 }

@@ -1,21 +1,64 @@
 @use '../abstracts'as *;
 
-// 2 COL
-// 3 COL
-// 4 COL
-// 4 COL LONG
 
 // FLEX BOX SYSTEM
 // TAKEN FROM: https://www.youtube.com/watch?v=g1kF45K-q7o&t=1s
+// A BIT OF SHAME IS THAT FOR NOW I AM USING A BORDER OF 7.5px of every side to do the spacing
+
 .row {
     display: flex;
     flex-direction: row;
+    justify-content: stretch;
+    align-items: stretch;
     flex-wrap: wrap;
 
-    padding: $containerConstant;
+    &.column {
+        flex-direction: column;
+    }
 
     @include for-watches-only {
         flex-direction: column;
+        padding: 0 $containerConstant - 2%;
+    }
+
+    @include for-phones-only {
+        padding: 0 $containerConstant - 1.5%;
+        &.reverse-mobile {
+            flex-direction: row-reverse;
+        }
+        &.column-reverse-mobile {
+            flex-direction: column-reverse;
+        }
+    }
+
+    @include for-tablets {
+        padding: 0 $containerConstant - 1%;
+        &.reverse {
+            flex-direction: row-reverse;
+        }
+        &.column-reverse {
+            flex-direction: column-reverse;
+        }
+    }
+
+    @include for-laptops {
+        padding: 0 $containerConstant - 0.60%;
+    }
+
+    &.h-center {
+        justify-content: center;
+
+        @include for-phones-only {
+            align-items: center;
+        }
+    }
+
+    &.v-center {
+        align-items: center;
+
+        @include for-phones-only {
+            justify-content: center;
+        }
     }
 }
 
@@ -23,21 +66,32 @@ $columns: 3;
 
 [class^=col-] {
     flex-basis: 100%;
-    // DELETE
-    background-color: $darkTurquoise;
-    padding: $smallSpace;
-    border: 2px solid $red;
+    // SHAMEFUL USE OF BORDERS FOR THE GUTTERS
+    border: (15px / 2) solid transparent;
+    border-bottom: 0;
+    border-top: 0;
+
+    // background-color: $darkTurquoise;
+    // padding: $smallSpace;
 }
 
 @include for-phones-only {
     @for $i from 1 through $columns {
         .col-m-#{$i} {
             flex: 0 0 (100% / ($columns /$i));
-
         }
 
         .col-m-offset-#{$i} {
             margin-left: 100% / ($columns*2 /$i);
+            margin-right: 100% / ($columns*2 /$i);
+        }
+
+        .col-m-offset-left-#{$i} {
+            margin-left: 100% / ($columns*2 /$i);
+        }
+
+        .col-m-offset-right-#{$i} {
+            margin-right: 100% / ($columns*2 /$i);
         }
     }
 
@@ -59,6 +113,15 @@ $columns: 3;
 
         .col-t-offset-#{$i} {
             margin-left: 100% / ($columns*2 /$i);
+            margin-right: 100% / ($columns*2 /$i);
+        }
+
+        .col-t-offset-left-#{$i} {
+            margin-left: 100% / ($columns*2 /$i);
+        }
+
+        .col-t-offset-right-#{$i} {
+            margin-left: 100% / ($columns*2 /$i);
         }
     }
 }
@@ -73,6 +136,16 @@ $columns: 3;
 
         .col-offset-#{$i} {
             margin-left: 100% / ($columns /$i);
+            margin-right: 100% / ($columns /$i);
+        }
+
+        .col-offset-left-#{$i} {
+            margin-left: 100% / ($columns /$i);
+
+        }
+
+        .col-offset-right-#{$i} {
+            margin-right: 100% / ($columns /$i);
         }
     }
 }

@@ -1,0 +1,54 @@
+@use '../abstracts'as *;
+
+#home-hero {
+
+    .cta-container {
+        margin-top: $largeSpace;
+
+        @include for-phones-only {
+            text-align: center;
+            margin-top: $midSpace;
+            .btn {
+                display: block;
+            }
+        }
+    }
+
+}
+
+.cv-container {
+
+    img {
+        animation: wiggleUpDown 7000ms ease infinite alternate;
+    }
+}
+
+figcaption {
+    margin-top: $midSpace;
+    margin-bottom: 0;
+
+    @include for-phones-only {
+        margin-top: 0;
+        margin-bottom: $smallSpace;
+
+        svg {
+            transform: matrix(0, 1, 1, 0, 0, 0) rotate(90deg);
+        }
+    }
+}
+
+
+
+@keyframes wiggleUpDown {
+    from {
+        transform: translateY($extraSmallSpace/2);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY($extraSmallSpace/2);
+    }
+}

@@ -1,0 +1,49 @@
+//  -------------------------------------------------------------------
+// --------------   MEDIA QUERRIES    --------------
+// --------------------------------------------------------------------
+$watches: 250px;
+$phones: 480px;
+$tablets: 481px;
+$laptops: 801px;
+
+
+
+// SOURCE FOR THE FOLLOWING METHODOLOGY
+//https://itnext.io/writing-media-queries-with-sass-mixins-3ea591ea3ea4
+
+@mixin for-watches {
+    @media (min-width: $watches) {
+        @content;
+    }
+}
+
+@mixin for-watches-only {
+    @media (max-width: $watches) {
+        @content;
+    }
+}
+
+
+@mixin for-phones-only {
+    @media (max-width: $phones) {
+        @content;
+    }
+}
+
+@mixin for-tablets {
+    @media (min-width: $tablets) {
+        @content;
+    }
+}
+
+@mixin for-laptops {
+    @media (min-width: $laptops) {
+        @content;
+    }
+}
+
+@mixin for-desktop-up {
+    @media (min-width: $desktops) {
+        @content;
+    }
+}
