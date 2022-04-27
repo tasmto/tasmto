@@ -5,7 +5,7 @@
 
 ##### WHAT I'M CURRENTLY UP TO
 
-- 👾 Leading frontend development for Future Agent;
+- 👾 Leading frontend development at Future Agent;
 -  🐱‍💻 **Looking for new work opportunities**.
 
 ##### TL;DR
