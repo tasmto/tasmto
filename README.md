@@ -1,7 +1,7 @@
 
 ### Hiya, I'm Tashinga *(/ˈta/ʃɪn/nɡʌ/)* (him/he) 👨🏿‍🦲😊
 
-#### I'm a Frontend JavaScript Developer living in Cape Town, ZA.
+#### I'm a Mern stack full-stack JavaScript Developer living in Cape Town, ZA.
 
 ##### WHAT I'M CURRENTLY UP TO
 
