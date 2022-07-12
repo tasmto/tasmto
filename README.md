@@ -12,7 +12,7 @@
 
 - 🏢 Currently working at **Future Agent**
 - ⚙️ My stack: `react.js`, `javascript`, `typescript`, `node.js`, `express.js`,  `mongo.db`, `.html`, `.css`, `figma`.
-- 💼 Portfolio: [tasmto.com](https://tasmto.netlify.app/).
+- 💼 Portfolio: [tasmto.com](https://tasmto.com/).
 - 💅 Developing: [Future Agent](https://www.futureagent.co.za).
 - 🌱 Currently mastering: `node.js` & `mongodb`.
 - 📫 Contact me: [email](mailto:mtokotashinga@gmail.com?subject=Hey%20Tashinga%2C%20I%20found%20your%20email%20on%20your%20GitHub...&body=Hey%20Tashinga%2C%0A%0A...), [twitter](https://twitter.com/tasmto) or [linkedin](https://www.linkedin.com/in/tasmto/).
