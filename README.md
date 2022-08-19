@@ -16,4 +16,4 @@
 - 💅 Developing: [Future Agent](https://www.futureagent.co.za).
 - 🌱 Currently mastering: `react native` & `sql`.
 - 📫 Contact me: [email](mailto:mtokotashinga@gmail.com?subject=Hey%20Tashinga%2C%20I%20found%20your%20email%20on%20your%20GitHub...&body=Hey%20Tashinga%2C%0A%0A...), [twitter](https://twitter.com/tasmto) or [linkedin](https://www.linkedin.com/in/tasmto/).
-- ⚡️ Fun fact: I'm a massive Animal Crossing fan.
+- ⚡️ Fun fact: I'm a massive Animal Crossing fan and I love rollerskating.
