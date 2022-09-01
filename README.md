@@ -3,14 +3,10 @@
 
 #### I'm a Full-Stack JavaScript Developer living in Cape Town, ZA.
 
-##### WHAT I'M CURRENTLY UP TO
-
-- 👾 Working in frontend development at Future Agent;
--  🐱‍💻 **Looking for new work opportunities**.
 
 ##### TL;DR
 
-- 🏢 Currently working at **Future Agent**
+- 🏢 Currently working at **Warp Development**
 - ⚙️ My stack: `react.js`, `next.js`, `typescript`, `node.js`, `express.js`, `postgres`,  `mongo.db`, `tailwind`, `css`, `figma`.
 - 💼 Portfolio: [tasmto.com](https://tasmto.com/).
 - 💅 Developing: [Future Agent](https://www.futureagent.co.za).
